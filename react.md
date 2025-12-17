@@ -1,7 +1,3 @@
-## 🧠 Frontend Interview Prep – State Management Deep Dive
-
----
-
 ### 📘 Core Concepts
 
 #### 🔹 React State Hooks
@@ -156,6 +152,69 @@ const MyComponent = memo(({ value }) => <div>{value}</div>);
 > "Redux is powerful for large apps, but for lighter projects I rely on local state and context for simplicity and performance."
 
 ---
+
+### useState
+
+#### functional updates
+
+Why “functional updates” are better (setCount(prev => ...))
+
+When you write:
+`setCount(count + 1);`
+you’re using count from the current render (a captured value). Most of the time it works, but it can break in situations where multiple updates happen before React commits a new render.
+
+The core idea
+
+React may batch state updates (especially in React 18).
+
+Event handlers capture the state value from the render in which they were created.
+
+If you call setCount(count + 1) multiple times in the same tick, each call might compute from the same old count.
+Example: “increment twice”
+```
+const incTwice = () => {
+  setCount(count + 1);
+  setCount(count + 1);
+};
+```
+If count is 0, you might expect 2.
+But both lines compute 0 + 1, so you often end up with 1.
+
+The fix: functional update
+```
+const incTwice = () => {
+  setCount((prev) => prev + 1);
+  setCount((prev) => prev + 1);
+};
+```
+Now React will apply them in order:
+
+prev: 0 → 1
+
+prev: 1 → 2
+
+So you reliably get 2.
+
+Why this matters even if you don’t call twice
+
+Because the moment you:
+
+trigger updates from async code (setTimeout, promises)
+
+reuse handlers in different contexts
+
+do multiple state updates in one event
+
+rely on React batching behavior
+
+…the functional form becomes the “always safe” default.
+
+Rule of thumb
+
+If the next state depends on the previous state → always use functional update
+
+.
+
 
 ### ⏭️ Next Topics To Cover
 - Async state handling (loading, error, data)
