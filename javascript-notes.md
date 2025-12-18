@@ -6,3 +6,16 @@ If used postfix, with operator after operand (for example, x++), the increment o
 If used prefix, with operator before operand (for example, ++x), the increment operator increments and returns the value after incrementing.
 
 The increment operator can only be applied on operands that are references (variables and object properties; i.e., valid assignment targets). ++x itself evaluates to a value, not a reference, so you cannot chain multiple increment operators together.
+```
+let x = 3;
+const y = x++;
+
+console.log(`x:${x}, y:${y}`);
+// Expected output: "x:4, y:3"
+
+let a = 3;
+const b = ++a;
+
+console.log(`a:${a}, b:${b}`);
+// Expected output: "a:4, b:4"
+```
