@@ -1,0 +1,25 @@
+### TypeScript system Setup
+
+`npm install -g --save-dev typescript tsx`
+
+#### What tsx actually does
+
+Uses esbuild under the hood
+
+Transpiles TS → JS very fast
+
+Focuses on execution speed, not correctness
+So this works:
+```
+const x: number = "hello"; // ❌ type error
+console.log(x);
+```
+
+### TypeScript commands
+* `tsx file.ts
+
+* `tsc --noEmit` 
+  ✔ Full type checking
+  ✔ Exact TS errors
+  ✔ No JS files generated
+* `tsc --watch` Errors update as you type.
