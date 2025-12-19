@@ -15,7 +15,7 @@ const x: number = "hello"; // ❌ type error
 console.log(x);
 ```
 
-### TypeScript commands
+### TypeScript packages commands
 * `tsx file.ts
 
 * `tsc --noEmit` 
@@ -23,3 +23,8 @@ console.log(x);
   ✔ Exact TS errors
   ✔ No JS files generated
 * `tsc --watch` Errors update as you type.
+
+  #### linter
+  `npm install --save-dev typescript eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin`
+
+  to be continued
