@@ -154,6 +154,8 @@ const MyComponent = memo(({ value }) => <div>{value}</div>);
 ---
 
 ### useState
+* When changes it triggers re-renders to the UI, it's main purpose is to update the UI when a value changes.
+* Avoid using a value in state that isn't used in the UI.
 
 #### functional updates
 
