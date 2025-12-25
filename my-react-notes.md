@@ -7,3 +7,57 @@ console.timeEnd('filter array');
 
 reference: https://react.dev/learn/you-might-not-need-an-effect
 
+### React forms
+#### Controlled Input (React controls the value)
+```
+import { useState } from "react";
+
+function ControlledInput() {
+  const [value, setValue] = useState<string>("");
+
+  return (
+    <input
+      type="text"
+      value={value}
+      onChange={(e) => setValue(e.target.value)}
+    />
+  );
+}
+```
+- Value is stored in **React state**
+- Uses `value` + `onChange`
+- React is the **source of truth**
+- Easy validation and reset
+- More predictable
+- More re-renders
+  
+#### Uncontrolled Input (DOM controls the value)
+```
+import { useRef } from "react";
+
+function UncontrolledInput() {
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const handleClick = () => {
+    console.log(inputRef.current?.value);
+  };
+
+  return (
+    <>
+      <input type="text" ref={inputRef} />
+      <button onClick={handleClick}>Read Value</button>
+    </>
+  );
+}
+```
+- Value is stored in the **DOM**
+- Uses `ref` to read value
+- Browser is the source of truth
+- Less re-renders
+- Harder validation
+- Less control
+
+#### Rule of Thumb
+- React needs the value → **Controlled**
+- React reads value occasionally → **Uncontrolled**
+
