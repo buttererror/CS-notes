@@ -65,3 +65,7 @@ function UncontrolledInput() {
 Components with many state updates spread across many event handlers can get overwhelming. For these cases, you can consolidate all the state update logic outside your component in a single function, called a reducer.
 Reference: https://react.dev/learn/extracting-state-logic-into-a-reducer
 
+### Hooks
+Hooks let you use different React features from your components. You can either use the built-in Hooks or combine them to build your own. This page lists all built-in Hooks in React.
+Reference: https://react.dev/reference/react/hooks
+
