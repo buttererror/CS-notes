@@ -25,8 +25,39 @@ BigInt values represent integer values which are too high or too low to be repre
 Description
 
 A BigInt value, also sometimes just called a BigInt, is a bigint primitive, created by appending n to the end of an integer literal, or by calling the BigInt() function (without the new operator) and giving it an integer value or string value.
+______________________
 
 ### Closures 
 A **closure** is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives a function access to its outer scope. In JavaScript, closures are created every time a function is created, at function creation time.
 
 Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures
+
+### Pure functions
+
+A pure function is a function that:
+
+Always returns the same output for the same input
+
+Does not change anything outside itself
+
+That’s it. Those two conditions.
+
+#### Side effects
+
+A side effect is anything a function does besides returning a value.
+
+Common side effects:
+
+Modifying a variable outside the function
+
+Writing to a file
+
+Making an HTTP request
+
+Logging to console
+
+Reading the current time
+
+Updating the DOM
+
+Mutating an object passed by reference
