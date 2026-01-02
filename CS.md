@@ -1,5 +1,34 @@
 # General Programming — Summary
 ## Programming Paradigms, Execution Models, and Design Patterns (CS Context)
+## Taxonomy (Organizing Principle)
+
+In this document, **taxonomy** refers to:
+
+> a hierarchical system for classifying and organizing Computer Science concepts,  
+> helping structure knowledge for understanding, navigation, and analysis.
+
+This taxonomy-based approach:
+- focuses on **relationships between concepts**, not learning order
+- uses **parent–child conceptual grouping**
+- distinguishes **core CS fields** from **applied or engineering layers**
+
+It is conceptually similar to:
+- biological taxonomy (classification by relation)
+- knowledge ontologies in computer science
+
+Examples of formal or semi-formal taxonomies include:
+- **Computer Science Ontology (CSO)** — for research topics and domain classification
+- **Bloom’s Taxonomy / SOLO Taxonomy** — for learning depth (used here only as reference, not structure)
+
+This document uses taxonomy to answer:
+- *Where does this concept belong in CS?*
+- *What other concepts is it adjacent to?*
+- *At what abstraction level does it operate?*
+
+It does **not** define:
+- learning sequence
+- implementation detail
+- mastery depth
 
 ---
 
