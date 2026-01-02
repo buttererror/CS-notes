@@ -63,7 +63,12 @@ function UncontrolledInput() {
 
 ### Extracting State into a reducer (useState = useReducer)
 Components with many state updates spread across many event handlers can get overwhelming. For these cases, you can consolidate all the state update logic outside your component in a single function, called a reducer.
-Reference: https://react.dev/learn/extracting-state-logic-into-a-reducer
+#### Step 1: Move from setting state to dispatching actions
+Managing state with reducers is slightly different from directly setting state. Instead of telling React “what to do” by setting state, you specify “what the user just did” by dispatching “actions” from your event handlers. (The state update logic will live elsewhere!) So instead of “setting tasks” via an event handler, you’re dispatching an “added/changed/deleted a task” action. This is more descriptive of the user’s intent.
+#### Step 2: Write a reducer function
+A reducer function is where you will put your state logic. It takes two arguments, the current state and the action object, and it returns the next state
+
+**Reference:** https://react.dev/learn/extracting-state-logic-into-a-reducer
 
 ### Hooks
 Hooks let you use different React features from your components. You can either use the built-in Hooks or combine them to build your own. This page lists all built-in Hooks in React.
