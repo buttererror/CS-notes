@@ -71,6 +71,48 @@ Focus:
 
 ## Core Definitions (Conceptual Grounding)
 
+### Boilerplate (Programming Concept)
+
+#### CS Classification
+- **Field**: Programming Languages / Software Engineering
+- **Area**: Language Design & System Structure
+- **Level**: Structural (non-behavioral)
+
+#### Definition
+
+In programming, **boilerplate** refers to:
+
+> repetitive or required code that establishes structure,
+> configuration, or integration, without expressing core program logic.
+
+Boilerplate:
+- is necessary for systems to function
+- provides setup, wiring, or contracts
+- does not define program behavior
+- does not change execution semantics
+
+#### Characteristics
+
+- low informational density
+- often repeated across files or projects
+- increases with explicit abstractions
+- varies by language, framework, and tooling
+
+#### Role in Program Structure
+
+Boilerplate exists to:
+- make assumptions explicit
+- connect components and systems
+- satisfy framework or language requirements
+
+It is a **structural cost**, not a conceptual primitive.
+
+---
+
+#### One-Line Mental Model
+
+> Boilerplate is the **scaffolding that supports logic**, not the logic itself.
+
 ### Programming Paradigms
 
 A **programming paradigm** defines:
