@@ -1,0 +1,14 @@
+- State management 
+- Routes management 
+- Forms management 
+- Lists management 
+- Style management 
+- Architecture management (System design maybe 🤔)
+- APIs management 
+- Authentication management 
+- Web vitals (performance metrics)with app optimization 
+- Progressive delivery for features or else
+- Service Workers
+- Browsers compatibility 
+- Web app Accessibility 
+
