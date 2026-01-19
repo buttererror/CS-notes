@@ -33,11 +33,14 @@ npx create-next-app@latest nextjs-dashboard \
 - Suitable for older codebases or incremental migration
 
 ---
-# CSS Modules in Next.js
+# CSS Styling
 ---
+## CSS modules
+---
+
 **Reference**: [CSS modules docs](https://nextjs.org/docs/app/getting-started/css)
 
-## Definition
+### Definition
 
 - CSS Modules provide **locally scoped CSS**
 - Class names are automatically namespaced
@@ -46,7 +49,7 @@ npx create-next-app@latest nextjs-dashboard \
 
 ---
 
-## File Naming
+### File Naming
 
 - Files must be named using:
   - `*.module.css`
@@ -56,13 +59,46 @@ Only files with `.module.` are treated as CSS Modules.
 
 ---
 
-## Basic Usage
+### Basic Usage
 
-### CSS Module
+#### CSS Module
+
 ```css
 /* Button.module.css */
 .button {
   padding: 8px 12px;
   border-radius: 6px;
 }
+```
+---
 
+## Using the clsx library to toggle class names
+
+There may be cases where you may need to conditionally style an element based on state or some other condition.
+
+### clsx
+is a library that lets you toggle class names easily. We recommend taking a look at documentation
+
+for more details, but here's the basic usage:
+Suppose that you want to create an InvoiceStatus component which accepts status. The status can be 'pending' or 'paid'.
+If it's 'paid', you want the color to be green. If it's 'pending', you want the color to be gray.
+
+You can use clsx to conditionally apply the classes, like this:
+
+```js
+import clsx from 'clsx';
+ 
+export default function InvoiceStatus({ status }: { status: string }) {
+  return (
+    <span
+      className={clsx(
+        'inline-flex items-center rounded-full px-2 py-1 text-sm',
+        {
+          'bg-gray-100 text-gray-500': status === 'pending',
+          'bg-green-500 text-white': status === 'paid',
+        },
+      )}
+    >
+    // ...
+)}
+```
