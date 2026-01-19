@@ -35,6 +35,15 @@ npx create-next-app@latest nextjs-dashboard \
 ---
 # CSS Styling
 ---
+Next.js provides several ways to style your application using CSS, including:
+
+- Tailwind CSS
+- CSS Modules
+- Global CSS
+- External Stylesheets
+- Sass
+- CSS-in-JS
+
 ## CSS modules
 ---
 
