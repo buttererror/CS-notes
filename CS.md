@@ -463,6 +463,75 @@ Cybersecurity:
 It is about **reasoning under adversarial conditions**.
 
 ---
+### Machine Learning Engineering
+
+#### CS Classification
+- **Field**: Computer Science
+- **Area**: Machine Learning / Software Engineering
+- **Layer**: CS–Software Engineering overlap
+- **Focus**: Operationalization of learning systems
+
+---
+
+#### Definition
+
+**Machine Learning Engineering** is concerned with:
+
+> designing, building, deploying, and maintaining machine learning systems  
+> in production environments.
+
+It bridges **machine learning theory** with **software and systems engineering**.
+
+---
+
+#### Core Responsibilities
+
+Machine learning engineering focuses on:
+- integrating trained models into real systems
+- managing data pipelines and feature flow
+- ensuring reproducibility and versioning
+- handling deployment, scaling, and monitoring
+- maintaining reliability over time
+
+The emphasis is on **system behavior**, not model invention.
+
+---
+
+#### Scope Boundaries
+
+Machine learning engineering:
+- is not model research or algorithm design
+- is not statistical theory
+- is not purely data analysis
+
+Those belong primarily to **Machine Learning research** or **Data Science**.
+
+---
+
+#### Relationship to Other CS Areas
+
+- **Machine Learning** → provides models and training methods
+- **Software Engineering** → provides system structure and reliability
+- **Distributed Systems** → supports scaling and data flow
+- **Security & Privacy** → governs data and model safety
+
+---
+
+#### Typical Concerns
+
+- model drift and data drift
+- deployment consistency
+- dependency and environment management
+- monitoring performance and failures
+
+These concerns arise from **running learning systems in the real world**.
+
+---
+
+#### One-Line Mental Model
+
+> Machine learning engineering turns **models into dependable systems**.
+
 
 #### One-Line Mental Model
 
